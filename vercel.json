@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "deploy.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "deploy.py"
+    }
+  ]
+}
