@@ -82,7 +82,6 @@ keras==2.12.0
 kiwisolver==1.4.4
 kneed==0.8.2
 libclang==16.0.0
-lxml==4.9.2
 Markdown==3.4.3
 MarkupSafe==2.1.2
 matlab==0.1
