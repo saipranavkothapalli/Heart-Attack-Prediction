@@ -1,4 +1,5 @@
 setuptools
+Gunicorn
 Flask==3.0.1
 scikit-learn==1.2.1
 numpy==1.23.5
