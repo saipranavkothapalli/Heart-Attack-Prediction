@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Arimo"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Hind:300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="static/css/style.css" />
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Arimo", sans-serif;
+        overflow-y: auto; /* Enable vertical scrolling */
+        display: flex; /* Add this to create space between form and image */
+      }
+      .btn {
+        display: inline-block;
+        display: inline;
+        zoom: 1;
+        padding: 4px 10px 4px;
+        margin-bottom: 0;
+        font-size: 13px;
+        line-height: 18px;
+        color: #333333;
+        text-align: center;
+        text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+        vertical-align: middle;
+        background-color: #f5f5f5;
+        background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+        background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
+
+        background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+        background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+        background-image: linear-gradient(top, #ffffff, #e6e6e6);
+        background-repeat: repeat-x;
+        filter: progid:dximagetransform.microsoft.gradient(startColorstr=#ffffff, endColorstr=#e6e6e6, GradientType=0);
+        border-color: #e6e6e6 #e6e6e6 #e6e6e6;
+        border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+        border: 1px solid #e6e6e6;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2),
+          0 1px 2px rgba(0, 0, 0, 0.05);
+        -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2),
+          0 1px 2px rgba(0, 0, 0, 0.05);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2),
+          0 1px 2px rgba(0, 0, 0, 0.05);
+        cursor: pointer;
+        margin-left: 0.3em;
+      }
+      .btn:hover,
+      .btn:active,
+      .btn.active,
+      .btn.disabled,
+      .btn[disabled] {
+        background-color: #e6e6e6;
+      }
+      .btn-large {
+        padding: 9px 14px;
+        font-size: 15px;
+        line-height: normal;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+      }
+      .btn:hover {
+        color: #333333;
+        text-decoration: none;
+        background-color: #e6e6e6;
+        background-position: 0 -15px;
+        -webkit-transition: background-position 0.1s linear;
+        -moz-transition: background-position 0.1s linear;
+        -ms-transition: background-position 0.1s linear;
+        -o-transition: background-position 0.1s linear;
+        transition: background-position 0.1s linear;
+      }
+      .btn-primary,
+      .btn-primary:hover {
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+        color: #ffffff;
+      }
+      .btn-primary.active {
+        color: rgba(255, 255, 255, 0.75);
+      }
+      .btn-primary {
+        background-color: #4a77d4;
+        background-image: -moz-linear-gradient(top, #6eb6de, #4a77d4);
+        background-image: -ms-linear-gradient(top, #6eb6de, #4a77d4);
+        background-image: -webkit-linear-gradient(top, #6eb6de, #4a77d4);
+        background-image: -o-linear-gradient(top, #6eb6de, #4a77d4);
+        background-image: linear-gradient(top, #6eb6de, #4a77d4);
+        background-repeat: repeat-x;
+        filter: progid:dximagetransform.microsoft.gradient(startColorstr=#6eb6de, endColorstr=#4a77d4, GradientType=0);
+        border: 1px solid #3762bc;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2),
+          0 1px 2px rgba(0, 0, 0, 0.5);
+      }
+      .btn-primary:hover,
+      .btn-primary:active,
+      .btn-primary.active,
+      .btn-primary.disabled,
+      .btn-primary[disabled] {
+        filter: none;
+        background-color: #4a77d4;
+      }
+      .btn-block {
+        width: 100%;
+        display: block;
+      }
+
+      * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      html {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      body {
+        width: 100%;
+        height: 100%;
+        font-family: "Open Sans", sans-serif;
+        background: #092756;
+        color: #fff;
+        font-size: 18px;
+        text-align: center;
+        letter-spacing: 1.2px;
+        background: -moz-radial-gradient(
+            0% 100%,
+            ellipse cover,
+            rgba(104, 128, 138, 0.4) 10%,
+            rgba(138, 114, 76, 0) 40%
+          ),
+          -moz-linear-gradient(top, rgba(57, 173, 219, 0.25) 0%, rgba(
+                  42,
+                  60,
+                  87,
+                  0.4
+                )
+                100%),
+          -moz-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+        background: -webkit-radial-gradient(
+            0% 100%,
+            ellipse cover,
+            rgba(104, 128, 138, 0.4) 10%,
+            rgba(138, 114, 76, 0) 40%
+          ),
+          -webkit-linear-gradient(top, rgba(57, 173, 219, 0.25) 0%, rgba(
+                  42,
+                  60,
+                  87,
+                  0.4
+                )
+                100%),
+          -webkit-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+        background: -o-radial-gradient(
+            0% 100%,
+            ellipse cover,
+            rgba(104, 128, 138, 0.4) 10%,
+            rgba(138, 114, 76, 0) 40%
+          ),
+          -o-linear-gradient(top, rgba(57, 173, 219, 0.25) 0%, rgba(
+                  42,
+                  60,
+                  87,
+                  0.4
+                )
+                100%),
+          -o-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+        background: -ms-radial-gradient(
+            0% 100%,
+            ellipse cover,
+            rgba(104, 128, 138, 0.4) 10%,
+            rgba(138, 114, 76, 0) 40%
+          ),
+          -ms-linear-gradient(top, rgba(57, 173, 219, 0.25) 0%, rgba(
+                  42,
+                  60,
+                  87,
+                  0.4
+                )
+                100%),
+          -ms-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+        background: -webkit-radial-gradient(
+            0% 100%,
+            ellipse cover,
+            rgba(104, 128, 138, 0.4) 10%,
+            rgba(138, 114, 76, 0) 40%
+          ),
+          linear-gradient(
+            to bottom,
+            rgba(57, 173, 219, 0.25) 0%,
+            rgba(42, 60, 87, 0.4) 100%
+          ),
+          linear-gradient(135deg, #670d10 0%, #092756 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3E1D6D', endColorstr='#092756',GradientType=1 );
+      }
+      .login {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        margin: -150px 0 0 -150px;
+        width: 400px;
+        height: 400px;
+      }
+
+      .login h1 {
+        color: #fff;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        letter-spacing: 1px;
+        text-align: center;
+      }
+
+      input {
+        width: 100%;
+        margin-bottom: 10px;
+        background: rgba(0, 0, 0, 0.3);
+        border: none;
+        outline: none;
+        padding: 10px;
+        font-size: 13px;
+        color: #fff;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        border-radius: 4px;
+        box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.2),
+          0 1px 1px rgba(255, 255, 255, 0.2);
+        -webkit-transition: box-shadow 0.5s ease;
+        -moz-transition: box-shadow 0.5s ease;
+        -o-transition: box-shadow 0.5s ease;
+        -ms-transition: box-shadow 0.5s ease;
+        transition: box-shadow 0.5s ease;
+      }
+      input:focus {
+        box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.4),
+          0 1px 1px rgba(255, 255, 255, 0.2);
+      }
+
+      .prediction-form {
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0),
+          rgba(234, 106, 106, 0.27),
+          rgba(235, 139, 139, 0)
+        );
+        width: 55%; /* Adjust the width based on your needs */
+        padding: 10px; /* Add padding for better aesthetics */
+      }
+
+      .prediction-form form {
+        margin-top: 0px;
+        width: 100%; /* Ensure the form takes full width */
+      }
+
+      .prediction-form input {
+        width: 80%;
+        margin-bottom: 10px;
+        padding: 11px;
+        box-sizing: border-box; /* Ensure padding is included in the width */
+      }
+
+      .btn {
+        width: 50%;
+        margin-top: 10px;
+        margin-left: 170px;
+        margin-bottom: 8px;
+        /* Align the button to the right within the flex container */
+      }
+
+      .image-container {
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0),
+          rgba(234, 106, 106, 0.27),
+          rgba(235, 139, 139, 0)
+        );
+        width: 51%; /* Adjust the width based on your needs */
+        position: relative;
+      }
+
+      .text-on-image {
+        position: relative;
+        margin-top: 2%;
+        top: 40px;
+        left: 12%;
+        transform: translateX(-10%);
+        color: rgb(255, 255, 255);
+        text-align: center;
+        font-size: 50px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-style: inherit;
+        /* Add more styles as needed */
+
+        /* Add shadow */
+        text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.8);
+
+        /* Add gradient background */
+      }
+
+      .image-container img {
+        margin-top: 79px;
+        padding-left: 5%;
+        width: 100%; /* Ensure the image takes full width of the container */
+        height: auto; /* Maintain the aspect ratio of the image */
+      }
+      h3 {
+        text-align: left;
+        margin-left: 11%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="image-container">
+      <div class="text-on-image">Heart Attack Prediction</div>
+      <img src="{{ url_for('static', filename='images/heart-beat.gif') }}" />
+    </div>
+    <div class="prediction-form">
+      <h3>Values:</h3>
+      <!-- Main Input For Receiving Query to our ML -->
+      <form action="{{ url_for('predict')}}" method="post">
+        <input
+          type="text"
+          name="age"
+          placeholder="age : 0 - 100"
+          required="required"
+        /><br />
+        <input
+          type="text"
+          name="sex"
+          placeholder="sex : male - 1 female - 0"
+          required="required"
+        /><br />
+        <input
+          type="text"
+          name="cp"
+          placeholder="cp"
+          required="required"
+        /><br />
+        <input
+          type="text"
+          name="trestbps"
+          placeholder="trestbps"
+          required="required"
+        /><br />
+        <input
+          type="text"
+          name="chol"
+          placeholder="chol"
+          required="required"
+        /><br />
+        <input
+          type="text"
+          name="fbs"
+          placeholder="fbs"
+          required="required"
+        /><br />
+        <input
+          type="text"
+          name="restecg"
+          placeholder="restecg"
+          required="required"
+        /><br />
+        <input
+          type="text"
+          name="thalach"
+          placeholder="thalach"
+          required="required"
+        /><br />
+        <input
+          type="text"
+          name="exang"
+          placeholder="exang"
+          required="required"
+        /><br />
+        <input
+          type="text"
+          name="oldpeak"
+          placeholder="oldpeak"
+          required="required"
+        /><br />
+        <input
+          type="text"
+          name="slope"
+          placeholder="slope"
+          required="required"
+        /><br />
+        <input
+          type="text"
+          name="ca"
+          placeholder="ca"
+          required="required"
+        /><br />
+        <input
+          type="text"
+          name="thal"
+          placeholder="thal"
+          required="required"
+        /><br />
+        <button
+          type="submit"
+          class="btn btn-primary btn-block btn-large"
+          onClick="document.getElementById('bottom').scrollIntoView();"
+        >
+          Predict
+        </button>
+        Prediction: {{ result }}
+      </form>
+    </div>
+  </body>
+</html>
