@@ -1,5 +1,14 @@
 {
   "version": 2,
-  "builds": [{ "src": "deploy.py", "use": "@vercel/python" }],
+  "builds": [
+    {
+      "src": "deploy.py",
+      "use": "@vercel/python",
+      "config": {
+        "zeroConfig": true
+      }
+    }
+  ],
+  "buildCommand": "sh build.sh",
   "routes": [{ "src": "/(.*)", "dest": "deploy.py" }]
 }
